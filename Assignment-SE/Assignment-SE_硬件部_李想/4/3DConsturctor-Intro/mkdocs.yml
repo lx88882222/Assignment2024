@@ -1,0 +1,8 @@
+site_name: 3DConsturctor-Intro
+nav:
+  - Home: index.md
+  - About: about.md
+theme:
+  name: readthedocs
+  logo: 1.jpg
+  

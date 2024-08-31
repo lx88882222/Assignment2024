@@ -1,0 +1,1 @@
+在 Armor.cs的ToItem 方法中，count 参数没有进行检查，如果传入的 count 为负数，则可能导致创建一个不符合预期的 Item 实例。

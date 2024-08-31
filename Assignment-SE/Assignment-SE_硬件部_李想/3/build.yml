@@ -1,0 +1,27 @@
+name: Build and Upload
+
+on: [push] # Trigger the workflow on push event 每次提交时，编译源代码并上传可执行文件
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Use the latest version of Ubuntu
+
+    steps:
+    - name: Checkout repository # Checkout the repository to the runner 检出存储库到runner
+      uses: actions/checkout@v2 #使用actions/checkout@v2
+
+    - name: Install dependencies
+      run: sudo apt-get install -y build-essential cmake # Install the build-essential and cmake packages
+
+    - name: Build the project # Build the project using CMake
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        make 
+
+    - name: Upload artifact # Upload the executable file as an artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: executable
+        path: build # Upload the executable file
