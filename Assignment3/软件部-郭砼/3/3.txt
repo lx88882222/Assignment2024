@@ -1,0 +1,5 @@
+后端设计方案：
+开发框架：django
+数据模型设计：User，Calender，FestivalInfo，Log
+需要实现的功能：User负责开发者注册，登录，退出，Calender负责提供日历，FestivalInfo负责整理节日信息，Log负责记录开发者开发的日志
+前后端交换的信息：前端通过 API 获取节日信息，并在日历中显示。用户在前端编辑节日信息时，通过 API 提交数据到后端。

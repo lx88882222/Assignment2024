@@ -11,3 +11,4 @@
 - [任务管理器 - 硬件部- 朱昊东](https://tendourisu.github.io/Schedule_Manager/)
 - [计算器-硬件部-夏弘宇](https://xiahy23.github.io/)
 - [个人简介-硬件部-李想](https://lx88882222.github.io/my-web-practice/)
+- [任务管理器-软件部-洪宸宇](https://hongcy22.github.io/)
