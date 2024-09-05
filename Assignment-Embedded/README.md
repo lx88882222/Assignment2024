@@ -83,7 +83,7 @@ build/
 
 - 学习[立创EDA](https://pro.lceda.cn/)的基本操作，找到自己手里的stm32板子的资料（包括原理图和规格尺寸），绘制一块最基础的“扩展板”。
 
-  - 要求：使用排母和排针，引出ST-Link使用的3v3，gnd，swclk，swdio。
+  - 要求：使用排母和排针，引出任意两个GPIO口，一排至少5个3V3，一排至少5个5V，一排至少5个GND，并创建铺铜区域，使得整块PCB的其他区域接地。资料可使用[这个](https://pan.baidu.com/s/1HH72h2E8srl6pn0-pe6Cyg?pwd=1234)
 
 - 另存为工程为epro文件，不要设置密码。
 ![image-20240828123910571](https://github.com/user-attachments/assets/d0757425-3a98-4f35-be74-a9f7dd5f8889)
