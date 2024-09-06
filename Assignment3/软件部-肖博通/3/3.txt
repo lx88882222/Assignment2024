@@ -1,0 +1,7 @@
+后端设计方案：
+框架：django
+模型：User，Calendar，Date，Festival, Share, Shared_Festival, Share_User
+需要实现功能：用户注册、登录、退出，用户修改日历信息，创建share群组，邀请/申请加入群组，管理群组成员， 加入/删除共享日历 
+前后端需要交流信息：
+    前->后：用户信息、修改日历操作、修改群组操作
+    后->前：日历信息、群组信息

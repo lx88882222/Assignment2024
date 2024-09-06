@@ -1,0 +1,48 @@
+name: Build and Upload Executable
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    # 使用矩阵策略来在不同操作系统上运行工作流
+    strategy:
+      matrix:
+        os: [ubuntu-latest,
+         windows-latest,
+         macos-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      # 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          if [ ${{ matrix.os }} == 'ubuntu-latest' ]; then
+            sudo apt-get update
+            sudo apt-get install -y cmake
+          elif [ ${{ matrix.os }} == 'windows-latest' ]; then
+            choco install cmake
+          elif [ ${{ matrix.os }} == 'macos-latest' ]; then
+            brew install cmake
+          fi
+
+      # 使用 cmake 自动检测编译器并构建项目 需要安装了cmake
+      - name: Configure and Build
+        run: |
+          mkdir -p build
+          cd build
+          cmake ..
+          cmake --build .
+
+      # 上传编译好的可执行文件
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my_executable
+          path: build/my_executable  

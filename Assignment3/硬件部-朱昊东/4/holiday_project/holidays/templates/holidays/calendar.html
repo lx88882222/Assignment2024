@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calendar</title>
+</head>
+
+<body>
+    <h1>Calendar</h1>
+    <ul>
+        {% for date in dates %}
+        <li>{{ date }} - {{ date.holiday_info }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_holiday' 2023 12 25 %}">Add Holiday</a>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Remove Holiday</title>
+</head>
+
+<body>
+    <h1>Remove Holiday for {{ date }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Remove</button>
+    </form>
+</body>
+
+</html>

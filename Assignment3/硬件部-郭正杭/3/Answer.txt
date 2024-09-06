@@ -1,0 +1,23 @@
+User类：
+代表系统中的用户（普通用户、管理员）
+处理用户的注册、登录与权限管理等
+属性有：user_id\username\password_hash\role
+行为有：authentic（）、getholiday（）
+
+Date类：
+表示某一具体日期，使其符合公元日历
+
+Holiday类：
+表示系统中的一个节日，包括节日信息
+属性有：holiday_id\name\date\creator_id\public\description
+行为有：edit_holiday \delete holiday\ ispublic
+
+Calendar类：
+管理并传递具有节日信息的日历
+属性有：calender_id\user id\holidays
+行为有：add holiday\delete holiday\edit holiday\get_holiday
+
+
+看ChatGPT说还需要Permission和AuditLog
+Permission用来处理用户与节日信息的匹配与修改权限
+AuditLog记录用户在系统中的操作日志

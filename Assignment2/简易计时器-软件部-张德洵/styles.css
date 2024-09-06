@@ -1,0 +1,44 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#timer {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  font-size: 18px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.button-container .start-button {
+  background-color: #4CAF50;
+}
+
+.button-container .pause-button {
+  background-color: #2196F3;
+}
+
+.button-container .reset-button {
+  background-color: #F44336;
+}
+
+.button-container button:hover {
+  opacity: 0.8; 
+}

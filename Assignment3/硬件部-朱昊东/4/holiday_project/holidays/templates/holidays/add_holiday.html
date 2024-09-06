@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Holiday</title>
+</head>
+
+<body>
+    <h1>Add Holiday for {{ date }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="holiday_info">Holiday Info:</label>
+        <input type="text" id="holiday_info" name="holiday_info">
+        <button type="submit">Add</button>
+    </form>
+</body>
+
+</html>

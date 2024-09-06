@@ -1,0 +1,29 @@
+on:
+  push:
+    paths:
+      - .github/workflow/build.yml
+      - src/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up C++ environment
+        uses: actions/setup-cpp@v1
+
+      - name: Build and test
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
+          ./my_executable
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my_executable
+          path: build/my_executable

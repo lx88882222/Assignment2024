@@ -3,6 +3,3 @@ F先生希望开发一个节日信息共享系统，该系统支持用户编辑�
 User类：本身存储用户名+密码数据；支持Register, Login, Logout, SetPassword,  GetCalendar和CompileDate功能
 Calendar类：包含一系列Date类的对象，支持通过日期查找对应的Date对象，支持给一段时间的Date写入同样的节日信息/清空节日信息
 Date类：包含年月日信息，以及节日信息，支持写入/删除节日信息
-
-
-
